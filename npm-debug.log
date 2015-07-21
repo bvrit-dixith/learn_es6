@@ -1,0 +1,90 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'karma-phantom-launcher',
+1 verbose cli   '--save-dev' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.34
+4 warn package.json dixith@1.0.0 No description
+5 warn package.json dixith@1.0.0 No repository field.
+6 warn package.json dixith@1.0.0 No README data
+7 warn package.json babel-core@5.7.4 No README data
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'karma-phantom-launcher', null ]
+10 verbose cache add name=undefined spec="karma-phantom-launcher" args=["karma-phantom-launcher",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'karma-phantom-launcher',
+11 verbose parsed url   path: 'karma-phantom-launcher',
+11 verbose parsed url   href: 'karma-phantom-launcher' }
+12 silly lockFile 14e8ff10-karma-phantom-launcher karma-phantom-launcher
+13 verbose lock karma-phantom-launcher /Users/dixithk/.npm/14e8ff10-karma-phantom-launcher.lock
+14 silly lockFile 14e8ff10-karma-phantom-launcher karma-phantom-launcher
+15 silly lockFile 14e8ff10-karma-phantom-launcher karma-phantom-launcher
+16 verbose addNamed [ 'karma-phantom-launcher', '' ]
+17 verbose addNamed [ null, '*' ]
+18 silly lockFile bde3fbb5-karma-phantom-launcher karma-phantom-launcher@
+19 verbose lock karma-phantom-launcher@ /Users/dixithk/.npm/bde3fbb5-karma-phantom-launcher.lock
+20 silly addNameRange { name: 'karma-phantom-launcher', range: '*', hasData: false }
+21 verbose request where is /karma-phantom-launcher
+22 verbose request registry https://registry.npmjs.org/
+23 verbose request id 22ed64cfd72bf52a
+24 verbose url raw /karma-phantom-launcher
+25 verbose url resolving [ 'https://registry.npmjs.org/', './karma-phantom-launcher' ]
+26 verbose url resolved https://registry.npmjs.org/karma-phantom-launcher
+27 verbose request where is https://registry.npmjs.org/karma-phantom-launcher
+28 info trying registry request attempt 1 at 17:07:07
+29 http GET https://registry.npmjs.org/karma-phantom-launcher
+30 http 404 https://registry.npmjs.org/karma-phantom-launcher
+31 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+31 verbose headers   'content-type': 'application/json',
+31 verbose headers   'cache-control': 'max-age=0',
+31 verbose headers   'content-length': '51',
+31 verbose headers   'accept-ranges': 'bytes',
+31 verbose headers   date: 'Mon, 20 Jul 2015 11:37:08 GMT',
+31 verbose headers   via: '1.1 varnish',
+31 verbose headers   age: '0',
+31 verbose headers   connection: 'keep-alive',
+31 verbose headers   'x-served-by': 'cache-sin6920-SIN',
+31 verbose headers   'x-cache': 'MISS',
+31 verbose headers   'x-cache-hits': '0',
+31 verbose headers   'x-timer': 'S1437392228.552662,VS0,VE223' }
+32 silly registry.get cb [ 404,
+32 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+32 silly registry.get     'content-type': 'application/json',
+32 silly registry.get     'cache-control': 'max-age=0',
+32 silly registry.get     'content-length': '51',
+32 silly registry.get     'accept-ranges': 'bytes',
+32 silly registry.get     date: 'Mon, 20 Jul 2015 11:37:08 GMT',
+32 silly registry.get     via: '1.1 varnish',
+32 silly registry.get     age: '0',
+32 silly registry.get     connection: 'keep-alive',
+32 silly registry.get     'x-served-by': 'cache-sin6920-SIN',
+32 silly registry.get     'x-cache': 'MISS',
+32 silly registry.get     'x-cache-hits': '0',
+32 silly registry.get     'x-timer': 'S1437392228.552662,VS0,VE223' } ]
+33 silly lockFile bde3fbb5-karma-phantom-launcher karma-phantom-launcher@
+34 silly lockFile bde3fbb5-karma-phantom-launcher karma-phantom-launcher@
+35 error 404 404 Not Found: karma-phantom-launcher
+35 error 404
+35 error 404 'karma-phantom-launcher' is not in the npm registry.
+35 error 404 You should bug the author to publish it
+35 error 404 It was specified as a dependency of 'dixith'
+35 error 404
+35 error 404 Note that you can also install from a
+35 error 404 tarball, folder, or http url, or git url.
+36 error System Darwin 14.4.0
+37 error command "node" "/usr/local/bin/npm" "install" "karma-phantom-launcher" "--save-dev"
+38 error cwd /Users/dixithk/Desktop/es6_learn
+39 error node -v v0.10.34
+40 error npm -v 1.4.28
+41 error code E404
+42 verbose exit [ 1, true ]
