@@ -101,12 +101,199 @@ describe("testing ", function() {
     })
 
 
-     it("should check classes", function() {
-        class Emol
+    it("should check classes", function() {
+        class Employee {
+            doWork() {
+                return "complete"
+            }
+            getName() {
+                return "some"
+            }
+
+        }
 
         var e = new Employee();
         expect(e.getName()).toBe("some")
 
+     })
+
+    it("should work with constructor", function() {
+
+        class Employee {
+            constructor(name) {
+                this._name = name;
+            }
+
+            doWork() {
+               return "Complete!"
+            }
+
+            getName() {
+                return this._name;
+            }
+        }
+
+        let e1 = new Employee("sat");
+        let e2 = new Employee("nat");
+
+        expect(e1.getName()).toBe("sat")
+
+     })
+
+    it("should work with constructor getter and setters", function() {
+
+        class Employee {
+            constructor(name) {
+                this._name = name;
+            }
+
+            doWork() {
+               return "Complete!"
+            }
+
+            get name() {
+                return this._name;
+            }
+
+            set name(newName) {
+                this._name = newName;
+            }
+        }
+
+        let e1 = new Employee("sat");
+        let e2 = new Employee("nat");
+
+        expect(e1.name).toBe("sat")
+
+        e1.name = "monday";
+
+        expect(e1.name).toBe("monday");
+
+
+     })
+
+    it("should work with inheritance", function() {
+
+        class Person {
+            constructor(name) {
+                this.name = name;
+            }
+
+
+
+            get name() {
+                return this._name;
+            }
+
+            set name(newName) {
+                this._name = newName;
+            }
+        }
+
+        class Employee extends Person {
+            doWork() {
+                return `${this._name} is working`
+            }
+
+        }
+
+        let p1 = new Person("sat");
+        let e1 = new Employee("karma");
+
+        expect(p1.name).toBe("sat")
+
+        expect(e1.name).toBe("karma");
+        expect(e1.doWork()).toBe("karma is working");
+     });
+
+     it("should work with inheritance and super", function() {
+
+        class Person {
+            constructor(name) {
+                this.name = name;
+            }
+
+
+
+            get name() {
+                return this._name;
+            }
+
+            set name(newName) {
+                this._name = newName;
+            }
+        }
+
+        class Employee extends Person {
+
+            constructor(name, title) {
+                super(name);
+                this._title = title;
+            }
+
+            get title() {
+                return this._title;
+            }
+            doWork() {
+                return `${this._name} is working`
+            }
+
+        }
+
+        let p1 = new Person("sat");
+        let e1 = new Employee("karma", "dev");
+
+        expect(p1.name).toBe("sat")
+
+        expect(e1.name).toBe("karma");
+        expect(e1.title).toBe("dev")
+        expect(e1.doWork()).toBe("karma is working");
+     })
+
+     it("should work with overrides", function() {
+
+        class Person {
+            constructor(name) {
+                this.name = name;
+            }
+
+
+
+            get name() {
+                return this._name;
+            }
+
+            set name(newName) {
+                this._name = newName;
+            }
+
+            doWork() {
+                return "live"
+            }
+        }
+
+        class Employee extends Person {
+
+            constructor(name, title) {
+                super(name);
+                this._title = title;
+            }
+
+            get title() {
+                return this._title;
+            }
+
+            doWork() {
+                return  super.doWork() + " work"
+            }
+
+        }
+
+        let p1 = new Person("sat");
+        let e1 = new Employee("karma", "dev");
+
+        expect(e1.doWork()).toBe("live work");
+        expect(p1.doWork()).toBe("live");
      })
 
 })
